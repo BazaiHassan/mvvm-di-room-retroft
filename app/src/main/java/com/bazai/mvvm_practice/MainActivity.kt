@@ -16,13 +16,16 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.ViewModel
 import com.bazai.mvvm_practice.data.model.Grade
 import com.bazai.mvvm_practice.data.model.Posts
 import com.bazai.mvvm_practice.data.model.Student
 import com.bazai.mvvm_practice.ui.theme.MVVMPracticeTheme
+import com.bazai.mvvm_practice.viewmodel.DatastoreViewModel
 import com.bazai.mvvm_practice.viewmodel.PostsViewModel
 import com.bazai.mvvm_practice.viewmodel.StudentViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -78,6 +81,19 @@ class MainActivity : ComponentActivity() {
                     }
 
                     /********************** End Using Retrofit Responses ***************************/
+
+                    /********************** Start Using Datastore Responses ***************************/
+
+                    val datastoreViewModel by viewModels<DatastoreViewModel>()
+                    datastoreViewModel.saveToken("kxbvkjancbdvjhscbjvbjzcjzhbjbzjvhagn321654afakjhfs")
+
+                    LaunchedEffect(Dispatchers.Main){
+                        datastoreViewModel.userToken.collectLatest {token->
+                            Log.d("USER_TOKEN", token)
+                        }
+                    }
+
+                    /********************** End Using Datastore Responses ***************************/
 
                 }
             }
