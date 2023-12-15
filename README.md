@@ -2,6 +2,10 @@
 
 This is a sample Android MVVM (Model-View-ViewModel) project that demonstrates the use of modern Android development technologies and libraries including Dagger-Hilt, Retrofit, Jetpack Compose, Room Database, Kotlin Flow, and Coroutines.
 
+<p align="center">
+  <img src="https://developer.okta.com/assets-jekyll/blog/tutorial-kotlin-beginners-guide/kotlin-logo-social-21c8518b19eb96d96f35e0057bb92b7e1281a24820e0fa09e39c42f184bd7faa.png" width="200" />
+</p>
+
 ## Features
 
 - **MVVM Architecture**: The project follows the MVVM architectural pattern, separating concerns between data, presentation, and business logic.
