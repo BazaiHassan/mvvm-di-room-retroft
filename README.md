@@ -58,7 +58,7 @@ The project relies on the following key dependencies:
 
     // Datastore
     implementation "androidx.datastore:datastore-preferences:$datastore_version"
-
+```
 
 ## Contributions
 
