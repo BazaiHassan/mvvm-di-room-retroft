@@ -10,12 +10,14 @@ import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import com.bazai.mvvm_practice.data.model.Grade
 import com.bazai.mvvm_practice.data.model.Posts
@@ -87,8 +89,8 @@ class MainActivity : ComponentActivity() {
                     val datastoreViewModel by viewModels<DatastoreViewModel>()
                     datastoreViewModel.saveToken("kxbvkjancbdvjhscbjvbjzcjzhbjbzjvhagn321654afakjhfs")
 
-                    LaunchedEffect(Dispatchers.Main){
-                        datastoreViewModel.userToken.collectLatest {token->
+                    LaunchedEffect(Dispatchers.Main) {
+                        datastoreViewModel.userToken.collectLatest { token ->
                             Log.d("USER_TOKEN", token)
                         }
                     }
@@ -98,6 +100,12 @@ class MainActivity : ComponentActivity() {
                 }
             }
 
+        }
+        @Composable
+        fun UsingHiltViewModel(viewModel: DatastoreViewModel = hiltViewModel()) {
+            /***
+             * Here you can use `viewModel` as easy as a piece of cake
+             */
         }
     }
 

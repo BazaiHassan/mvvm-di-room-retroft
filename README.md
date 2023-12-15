@@ -33,6 +33,7 @@ To run the project, follow these steps:
 The project relies on the following key dependencies:
 
 - Dagger-Hilt
+- Hilt-Navigation-Compose (It is used for inject viewModels inside compose component easily)
 - Retrofit
 - Jetpack Compose
 - Room Database
@@ -63,9 +64,11 @@ The project relies on the following key dependencies:
     // Dagger-Hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
+    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
 
     // Datastore
     implementation "androidx.datastore:datastore-preferences:$datastore_version"
+
 ```
 
 ## Contributions
