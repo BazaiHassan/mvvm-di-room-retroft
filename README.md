@@ -38,6 +38,27 @@ The project relies on the following key dependencies:
 - Room Database
 - Kotlin Flow
 - Coroutines
+- Datastore
+
+## libraries
+```Kotlin
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.google.code.gson:gson:$retrofit_version"
+
+    // RoomDB
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+
+    // Dagger-Hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
+    // Datastore
+    implementation "androidx.datastore:datastore-preferences:$datastore_version"
+
 
 ## Contributions
 

@@ -81,6 +81,9 @@ dependencies {
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
 
+    // Datastore
+    implementation "androidx.datastore:datastore-preferences:$datastore_version"
+
 }
 
 // Allow references to generated code
