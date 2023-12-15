@@ -42,6 +42,14 @@ The project relies on the following key dependencies:
 
 ## libraries
 ```Kotlin
+    
+    // Versions
+    room_version = "2.5.0"
+    hilt_version="2.44"
+    retrofit_version="2.9.0"
+    datastore_version="1.0.0"
+
+
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
